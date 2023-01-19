@@ -3,12 +3,82 @@
     {
       "name": "Run PHPUnit tests",
       "setup": "",
-      "run": "php artisan test",
+      "run": "vendor/bin/phpunit --testdox --filter=test_home_screen_shows_welcome",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_user_page_existing_user_found",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_user_page_nonexisting_user_not_found",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_about_page_is_loaded",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_auth_middleware_is_working",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_task_crud_is_working",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_task_api_crud_is_working",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run PHPUnit tests",
+      "setup": "",
+      "run": "vendor/bin/phpunit --testdox --filter=test_is_admin_middleware_is_working",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
   ]
 }

@@ -1,10 +1,11 @@
-name: Evaluation
+name: Tests
 
 on:
   push:
     branches:
-      - main
-      - master
+      - '**'
+      - '!master'
+      - '!main'
 
 permissions:
   checks: write
@@ -13,7 +14,7 @@ permissions:
 
 jobs:
   build:
-    name: Autograding
+    name: Tests
     runs-on: [ self-hosted ]
     steps:
       - uses: shivammathur/setup-php@v2
@@ -42,11 +43,12 @@ jobs:
         run: |
           mkdir -p database
           touch database/database.sqlite
-
+      
       - name: List tests
         run: vendor/bin/phpunit --list-tests
       
-      - uses: education/autograding@v1
+      - name: Run tests
+        run: vendor/bin/phpunit --testdox
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: database/database.sqlite
