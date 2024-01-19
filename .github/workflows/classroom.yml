@@ -21,7 +21,7 @@ jobs:
           runner: self-hosted
           COMPOSER_TOKEN: ${{ secrets.COMPOSER_TOKEN }}
         with:
-          php-version: '8.1'
+          php-version: '8.2'
           extensions: pdo_sqlite
       
       - uses: actions/checkout@v2
